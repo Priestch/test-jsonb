@@ -104,6 +104,7 @@ class DatabaseSettings:
                 """
 
                 def encoder(bin_value: bytes) -> bytes:
+                    print("encoder", bin_value)
                     return b"\x01" + encode_json(bin_value)
 
                 def decoder(bin_value: bytes) -> Any:
